@@ -29,15 +29,22 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          SizedBox(height: 3),
           NavigationBar(
             backgroundColor: cores.cinzaClaro,
             indicatorColor: cores.azulEscuro,
             selectedIndex: _selectedIndex,
             destinations: const <Widget>[
-              NavigationDestination(icon: Icon(Icons.home), label: 'Início'),
-              NavigationDestination(icon: Icon(Icons.school), label: 'Módulos'),
               NavigationDestination(
-                icon: Icon(CupertinoIcons.book_solid),
+                icon: Icon(Icons.home, color: Colors.black),
+                label: 'Início',
+              ),
+              NavigationDestination(
+                icon: Icon(Icons.school, color: Colors.black),
+                label: 'Módulos',
+              ),
+              NavigationDestination(
+                icon: Icon(CupertinoIcons.book_solid, color: Colors.black),
                 label: 'Glossário',
               ),
             ],

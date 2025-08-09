@@ -1,7 +1,6 @@
 import 'package:app_cas_natal/assets/cores.dart';
 import 'package:app_cas_natal/rotas.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
@@ -27,9 +26,12 @@ class AppWidget extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme),
+        textTheme: TextTheme(
+          bodyLarge: TextStyle(color: cores.preto),
+          bodyMedium: TextStyle(color: cores.preto),
+          bodySmall: TextStyle(color: cores.preto),
+        ),
       ),
-
       routerConfig: AppNavigation.rotas,
     );
   }
