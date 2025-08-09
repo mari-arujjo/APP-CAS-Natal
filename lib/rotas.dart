@@ -1,4 +1,8 @@
 import 'package:app_cas_natal/nav.dart';
+import 'package:app_cas_natal/pages/Glossario/glossario_page.dart';
+import 'package:app_cas_natal/pages/Inicio/config.dart';
+import 'package:app_cas_natal/pages/Inicio/home_page.dart';
+import 'package:app_cas_natal/pages/Modulos/modulos_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -30,12 +34,59 @@ class AppNavigation {
     routes: <RouteBase>[
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
-          return NavBarWidget(navigatiponShell: navigationShell);
+          return NavigationBarWidget(navigationShell: navigationShell);
         },
+
         branches: <StatefulShellBranch>[
+          ////////////// BRANCH -> INICIO
           StatefulShellBranch(
             navigatorKey: _rootNavigatorInicio,
-            routes: [GoRoute(path: '/iome', name: 'Inicio')],
+            routes: [
+              GoRoute(
+                path: '/inicio',
+                name: 'Inicio',
+                builder: (context, state) {
+                  return InicioPage(key: state.pageKey);
+                },
+                routes: [
+                  GoRoute(
+                    path: '/configuracoes',
+                    name: 'Configuracoes',
+                    builder: (context, state) {
+                      return ConfiguracoesPage(key: state.pageKey);
+                    },
+                  ),
+                ],
+              ),
+            ],
+          ),
+
+          ////////////// BRANCH -> MODULOS
+          StatefulShellBranch(
+            navigatorKey: _rootNavigatorModulos,
+            routes: [
+              GoRoute(
+                path: '/modulos',
+                name: 'Modulos',
+                builder: (context, state) {
+                  return ModulosPage(key: state.pageKey);
+                },
+              ),
+            ],
+          ),
+
+          ////////////// BRANCH -> MODULOS
+          StatefulShellBranch(
+            navigatorKey: _rootNavigatorGlossario,
+            routes: [
+              GoRoute(
+                path: '/glossario',
+                name: 'Glossario',
+                builder: (context, state) {
+                  return GlossarioPage(key: state.pageKey);
+                },
+              ),
+            ],
           ),
         ],
       ),

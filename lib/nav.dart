@@ -1,17 +1,58 @@
+import 'package:app_cas_natal/assets/cores.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class NavBarWidget extends StatefulWidget {
-  final StatefulNavigationShell navigatiponShell;
-  const NavBarWidget({super.key, required this.navigatiponShell});
+class NavigationBarWidget extends StatefulWidget {
+  final StatefulNavigationShell navigationShell;
+  const NavigationBarWidget({super.key, required this.navigationShell});
 
   @override
-  State<NavBarWidget> createState() => _NavBarWidgetState();
+  State<NavigationBarWidget> createState() => _NavigationBarWidgetState();
 }
 
-class _NavBarWidgetState extends State<NavBarWidget> {
+class _NavigationBarWidgetState extends State<NavigationBarWidget> {
+  int _selectedIndex = 0;
+
+  void mudarDeBranch(int index) {
+    widget.navigationShell.goBranch(
+      index,
+      initialLocation: index == widget.navigationShell.currentIndex,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    final cores = Cores();
+
+    return Scaffold(
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          NavigationBar(
+            backgroundColor: cores.cinzaClaro,
+            indicatorColor: cores.azulEscuro,
+            selectedIndex: _selectedIndex,
+            destinations: const <Widget>[
+              NavigationDestination(icon: Icon(Icons.home), label: 'Início'),
+              NavigationDestination(icon: Icon(Icons.school), label: 'Módulos'),
+              NavigationDestination(
+                icon: Icon(CupertinoIcons.book_solid),
+                label: 'Glossário',
+              ),
+            ],
+
+            onDestinationSelected: (int index) {
+              setState(() {
+                _selectedIndex = index;
+              });
+              mudarDeBranch(_selectedIndex);
+            },
+          ),
+        ],
+      ),
+
+      body: SizedBox(child: widget.navigationShell),
+    );
   }
 }
