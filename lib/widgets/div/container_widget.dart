@@ -15,7 +15,7 @@ class _ContainerWidgetState extends State<ContainerWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: EdgeInsets.all(25),
       decoration: BoxDecoration(
         color: cores.cinzaClaro,
         borderRadius: BorderRadius.circular(10),

@@ -2,7 +2,9 @@ import 'package:app_cas_natal/nav.dart';
 import 'package:app_cas_natal/pages/Glossario/glossario_page.dart';
 import 'package:app_cas_natal/pages/Inicio/config_page.dart';
 import 'package:app_cas_natal/pages/Inicio/editar_perfil_page.dart';
-import 'package:app_cas_natal/pages/Inicio/home_page.dart';
+import 'package:app_cas_natal/pages/Inicio/inicio_page.dart';
+import 'package:app_cas_natal/pages/Inicio/preferencias_page.dart';
+import 'package:app_cas_natal/pages/Inicio/senha_page.dart';
 import 'package:app_cas_natal/pages/Modulos/modulos_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -62,6 +64,20 @@ class AppNavigation {
                         name: 'EditarPerfil',
                         builder: (context, state) {
                           return EditarPerfilPage(key: state.pageKey);
+                        },
+                      ),
+                      GoRoute(
+                        path: '/preferencias',
+                        name: 'Preferencias',
+                        builder: (context, state) {
+                          return PreferenciasPage(key: state.pageKey);
+                        },
+                      ),
+                      GoRoute(
+                        path: '/redefinirSenha',
+                        name: 'RedefinirSenha',
+                        builder: (context, state) {
+                          return RedefinirSenhaPage(key: state.pageKey);
                         },
                       ),
                     ],

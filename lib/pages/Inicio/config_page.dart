@@ -1,6 +1,6 @@
 import 'package:app_cas_natal/assets/cores.dart';
-import 'package:app_cas_natal/widgets/botoes/bt_laranja.dart';
-import 'package:app_cas_natal/widgets/botoes/bt_outline.dart';
+import 'package:app_cas_natal/widgets/botoes/bt_laranja_widget.dart';
+import 'package:app_cas_natal/widgets/botoes/bt_outline_widget.dart';
 import 'package:app_cas_natal/widgets/vizualizacao/foto.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -64,7 +64,9 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
 
                 SizedBox(height: 50),
                 BotaoOutlineWidget(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.goNamed('Preferencias');
+                  },
                   txt: 'Preferências',
                   tam: 350,
                   iconInicio: Icons.tune,
@@ -85,7 +87,9 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                 ),
                 SizedBox(height: 15),
                 BotaoOutlineWidget(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.goNamed('RedefinirSenha');
+                  },
                   txt: 'Redefinir senha',
                   tam: 350,
                   iconInicio: Icons.lock,

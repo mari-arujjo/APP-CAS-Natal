@@ -1,4 +1,8 @@
-import 'package:app_cas_natal/widgets/container/container_widget.dart';
+import 'package:app_cas_natal/assets/cores.dart';
+import 'package:app_cas_natal/widgets/botoes/bt_icon_widget.dart';
+import 'package:app_cas_natal/widgets/botoes/bt_laranja_widget.dart';
+import 'package:app_cas_natal/widgets/div/container_widget.dart';
+import 'package:app_cas_natal/widgets/inputs/input_widget.dart';
 import 'package:app_cas_natal/widgets/vizualizacao/foto.dart';
 import 'package:flutter/material.dart';
 
@@ -10,26 +14,66 @@ class EditarPerfilPage extends StatefulWidget {
 }
 
 class _EditarPerfilPageState extends State<EditarPerfilPage> {
+  final cores = Cores();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('@mari.arujjo')),
-      body: Center(
-        child: Padding(
-          padding: EdgeInsets.all(20),
-          child: Column(
-            children: [
-              FotoWidget(tam: 60),
-              SizedBox(height: 20),
-              ContainerWidget(
-                child: Form(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [Text('affffff veyyyyyaaaaaaaaaaaaaaaaa')],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: EdgeInsets.all(20),
+            child: Column(
+              children: [
+                Stack(
+                  alignment: Alignment.bottomRight,
+                  children: [
+                    FotoWidget(tam: 60),
+                    BotaoIconWidget(icon: Icon(Icons.edit)),
+                  ],
+                ),
+                SizedBox(height: 20),
+                ContainerWidget(
+                  child: Form(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Nome:', style: TextStyle(fontSize: 16)),
+                        SizedBox(height: 5),
+                        InputPadraoWidget(maxLength: 50),
+
+                        Text('Usuário:', style: TextStyle(fontSize: 16)),
+                        SizedBox(height: 5),
+                        InputPadraoWidget(maxLength: 20),
+
+                        Text('Email:', style: TextStyle(fontSize: 16)),
+                        SizedBox(height: 5),
+                        InputPadraoWidget(maxLength: 150),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+                SizedBox(height: 20),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    BotaoLaranjaWidget(
+                      txt: 'Salvar',
+                      onPressed: () {},
+                      tam: 120,
+                    ),
+                    SizedBox(width: 20),
+                    BotaoLaranjaWidget(
+                      txt: 'Cancelar',
+                      onPressed: () {},
+                      tam: 120,
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
