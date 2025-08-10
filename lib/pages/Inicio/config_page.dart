@@ -3,6 +3,7 @@ import 'package:app_cas_natal/widgets/botoes/bt_laranja.dart';
 import 'package:app_cas_natal/widgets/botoes/bt_outline.dart';
 import 'package:app_cas_natal/widgets/vizualizacao/foto.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ConfiguracoesPage extends StatefulWidget {
   const ConfiguracoesPage({super.key});
@@ -27,7 +28,7 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SizedBox(width: 15),
-                    FotoWidget(),
+                    FotoWidget(tam: 30),
                     SizedBox(width: 15),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,7 +56,9 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
 
                 BotaoLaranjaWidget(
                   txt: 'Editar perfil',
-                  onPressed: () {},
+                  onPressed: () {
+                    context.goNamed('EditarPerfil');
+                  },
                   tam: 350,
                 ),
 
@@ -64,7 +67,7 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                   onPressed: () {},
                   txt: 'Preferências',
                   tam: 350,
-                  iconInicio: Icons.settings,
+                  iconInicio: Icons.tune,
                 ),
                 SizedBox(height: 15),
                 BotaoOutlineWidget(
@@ -78,14 +81,14 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                   onPressed: () {},
                   txt: 'Estatísticas',
                   tam: 350,
-                  iconInicio: Icons.javascript,
+                  iconInicio: Icons.bar_chart,
                 ),
                 SizedBox(height: 15),
                 BotaoOutlineWidget(
                   onPressed: () {},
                   txt: 'Redefinir senha',
                   tam: 350,
-                  iconInicio: Icons.password,
+                  iconInicio: Icons.lock,
                 ),
                 SizedBox(height: 15),
                 BotaoOutlineWidget(
@@ -99,14 +102,14 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                   onPressed: () {},
                   txt: 'Termos de serviço',
                   tam: 350,
-                  iconInicio: Icons.settings,
+                  iconInicio: Icons.description,
                 ),
                 SizedBox(height: 15),
                 BotaoOutlineWidget(
                   onPressed: () {},
                   txt: 'Sair',
                   tam: 350,
-                  iconInicio: Icons.settings,
+                  iconInicio: Icons.logout,
                 ),
               ],
             ),

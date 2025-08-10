@@ -20,15 +20,15 @@ class _InicioPageState extends State<InicioPage> {
             onPressed: () {
               context.goNamed('Configuracoes');
             },
-            icon: Icon(Icons.settings),
+            icon: Icon(Icons.settings, size: 30),
           ),
         ],
       ),
       body: Center(
         child: Column(
           children: [
-            Text('Conteúdo do Início'),
-            BotaoLaranjaWidget(txt: 'Cancelar', onPressed: () {}, tam: 120),
+            Image.asset('lib/assets/logo_cas.png', width: 250, height: 250),
+            BotaoLaranjaWidget(txt: 'Omaga!', onPressed: () {}, tam: 120),
           ],
         ),
       ),

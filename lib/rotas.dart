@@ -1,6 +1,7 @@
 import 'package:app_cas_natal/nav.dart';
 import 'package:app_cas_natal/pages/Glossario/glossario_page.dart';
-import 'package:app_cas_natal/pages/Inicio/config.dart';
+import 'package:app_cas_natal/pages/Inicio/config_page.dart';
+import 'package:app_cas_natal/pages/Inicio/editar_perfil_page.dart';
 import 'package:app_cas_natal/pages/Inicio/home_page.dart';
 import 'package:app_cas_natal/pages/Modulos/modulos_page.dart';
 import 'package:flutter/material.dart';
@@ -55,6 +56,15 @@ class AppNavigation {
                     builder: (context, state) {
                       return ConfiguracoesPage(key: state.pageKey);
                     },
+                    routes: [
+                      GoRoute(
+                        path: '/editarPerfil',
+                        name: 'EditarPerfil',
+                        builder: (context, state) {
+                          return EditarPerfilPage(key: state.pageKey);
+                        },
+                      ),
+                    ],
                   ),
                 ],
               ),
