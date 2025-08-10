@@ -96,7 +96,9 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                 ),
                 SizedBox(height: 15),
                 BotaoOutlineWidget(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.goNamed('Sobre');
+                  },
                   txt: 'Sobre o app',
                   tam: 350,
                   iconInicio: Icons.info,

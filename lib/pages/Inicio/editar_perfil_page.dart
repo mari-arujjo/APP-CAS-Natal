@@ -41,15 +41,24 @@ class _EditarPerfilPageState extends State<EditarPerfilPage> {
                       children: [
                         Text('Nome:', style: TextStyle(fontSize: 16)),
                         SizedBox(height: 5),
-                        InputPadraoWidget(maxLength: 50),
+                        InputPadraoWidget(
+                          maxLength: 50,
+                          hintText: 'Mariana Araújo Silva',
+                        ),
 
                         Text('Usuário:', style: TextStyle(fontSize: 16)),
                         SizedBox(height: 5),
-                        InputPadraoWidget(maxLength: 20),
+                        InputPadraoWidget(
+                          maxLength: 20,
+                          hintText: 'mari.arujjo',
+                        ),
 
                         Text('Email:', style: TextStyle(fontSize: 16)),
                         SizedBox(height: 5),
-                        InputPadraoWidget(maxLength: 150),
+                        InputPadraoWidget(
+                          maxLength: 150,
+                          hintText: 'mariana.araujo@email.com',
+                        ),
                       ],
                     ),
                   ),

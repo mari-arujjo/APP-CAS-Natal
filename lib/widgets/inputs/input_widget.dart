@@ -16,17 +16,17 @@ class _InputPadraoWidgetState extends State<InputPadraoWidget> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      cursorColor: cores.laranja,
+      cursorColor: cores.azulEscuro,
       maxLength: widget.maxLength,
       decoration: InputDecoration(
         hintText: widget.hintText,
-        hintStyle: TextStyle(color: cores.laranja),
+        hintStyle: TextStyle(color: cores.azulEscuro),
         filled: true,
         fillColor: Colors.white,
         border: UnderlineInputBorder(borderRadius: BorderRadius.circular(10)),
         focusedBorder: UnderlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: cores.laranja),
+          borderSide: BorderSide(color: cores.azulEscuro),
         ),
       ),
     );

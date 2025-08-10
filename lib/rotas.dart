@@ -5,6 +5,7 @@ import 'package:app_cas_natal/pages/Inicio/editar_perfil_page.dart';
 import 'package:app_cas_natal/pages/Inicio/inicio_page.dart';
 import 'package:app_cas_natal/pages/Inicio/preferencias_page.dart';
 import 'package:app_cas_natal/pages/Inicio/senha_page.dart';
+import 'package:app_cas_natal/pages/Inicio/sobre_page.dart';
 import 'package:app_cas_natal/pages/Modulos/modulos_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -78,6 +79,13 @@ class AppNavigation {
                         name: 'RedefinirSenha',
                         builder: (context, state) {
                           return RedefinirSenhaPage(key: state.pageKey);
+                        },
+                      ),
+                      GoRoute(
+                        path: '/sobre',
+                        name: 'Sobre',
+                        builder: (context, state) {
+                          return SobrePage(key: state.pageKey);
                         },
                       ),
                     ],
