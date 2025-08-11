@@ -1,4 +1,5 @@
 import 'package:app_cas_natal/assets/cores.dart';
+import 'package:app_cas_natal/widgets/botoes/bt_avatar_widget.dart';
 import 'package:app_cas_natal/widgets/botoes/bt_outline2_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class _PreferenciasPageState extends State<PreferenciasPage> {
       appBar: AppBar(title: Text('Preferências')),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.all(30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -26,40 +27,38 @@ class _PreferenciasPageState extends State<PreferenciasPage> {
                 'Personalização da leitura',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 5),
               BotaoOutline2Widget(
                 onPressed: () {},
                 txt: 'Fonte',
                 tam: 350,
                 iconInicio: Icons.font_download,
                 txt2: 'Inter',
-                corIcon: const Color.fromARGB(172, 81, 6, 255),
+                corIcon: cores.preto,
               ),
-              SizedBox(height: 15),
               BotaoOutline2Widget(
                 onPressed: () {},
                 txt: 'Tamanho da fonte',
                 tam: 350,
                 iconInicio: Icons.font_download,
                 txt2: '14',
-                corIcon: Color.fromARGB(172, 81, 6, 255),
+                corIcon: cores.preto,
               ),
-              SizedBox(height: 15),
               BotaoOutline2Widget(
                 onPressed: () {},
                 txt: 'Cor da página',
                 tam: 350,
                 iconInicio: Icons.color_lens,
                 txt2: 'Branco',
-                corIcon: Color.fromARGB(173, 255, 8, 173),
+                corIcon: cores.preto,
               ),
 
-              SizedBox(height: 20),
+              Divider(),
+              SizedBox(height: 15),
+
               Text(
                 'Tela inicial',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 5),
               BotaoOutline2Widget(
                 onPressed: () {},
                 txt: 'Exibição de estatísticas',
@@ -69,10 +68,29 @@ class _PreferenciasPageState extends State<PreferenciasPage> {
                 corIcon: cores.preto,
               ),
 
-              SizedBox(height: 20),
+              Divider(),
+              SizedBox(height: 15),
+
               Text(
                 'Avatar',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  BotaoAvatarWidget(
+                    onPressed: () {},
+                    tam: 168,
+                    img: 'lib/assets/menina.png',
+                  ),
+                  SizedBox(width: 15),
+                  BotaoAvatarWidget(
+                    onPressed: () {},
+                    tam: 168,
+                    img: 'lib/assets/menino.png',
+                  ),
+                ],
               ),
             ],
           ),

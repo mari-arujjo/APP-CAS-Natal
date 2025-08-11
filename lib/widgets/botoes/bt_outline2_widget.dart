@@ -37,6 +37,12 @@ class _BotaoOutline2WidgetState extends State<BotaoOutline2Widget> {
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           ),
           overlayColor: WidgetStatePropertyAll(Colors.transparent),
+          side: WidgetStatePropertyAll(
+            BorderSide(color: Colors.transparent, width: 1),
+          ),
+          padding: WidgetStatePropertyAll(
+            EdgeInsets.symmetric(horizontal: 0, vertical: 5), // margem interna
+          ),
         ),
         onPressed: widget.onPressed,
         child: Row(

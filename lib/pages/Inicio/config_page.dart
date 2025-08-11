@@ -21,7 +21,7 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 10),
+            padding: EdgeInsets.only(left: 15, right: 15, bottom: 20, top: 10),
             child: Column(
               children: [
                 Row(
@@ -59,7 +59,7 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                   onPressed: () {
                     context.goNamed('EditarPerfil');
                   },
-                  tam: 350,
+                  tam: 360,
                 ),
 
                 SizedBox(height: 50),
@@ -68,53 +68,53 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                     context.goNamed('Preferencias');
                   },
                   txt: 'Preferências',
-                  tam: 350,
+                  tam: 360,
                   iconInicio: Icons.tune,
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 5),
                 BotaoOutlineWidget(
                   onPressed: () {},
                   txt: 'Favoritos',
-                  tam: 350,
+                  tam: 360,
                   iconInicio: Icons.favorite,
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 5),
                 BotaoOutlineWidget(
                   onPressed: () {},
                   txt: 'Estatísticas',
-                  tam: 350,
+                  tam: 360,
                   iconInicio: Icons.bar_chart,
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 5),
                 BotaoOutlineWidget(
                   onPressed: () {
                     context.goNamed('RedefinirSenha');
                   },
                   txt: 'Redefinir senha',
-                  tam: 350,
+                  tam: 360,
                   iconInicio: Icons.lock,
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 5),
                 BotaoOutlineWidget(
                   onPressed: () {
                     context.goNamed('Sobre');
                   },
                   txt: 'Sobre o app',
-                  tam: 350,
+                  tam: 360,
                   iconInicio: Icons.info,
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 5),
                 BotaoOutlineWidget(
                   onPressed: () {},
                   txt: 'Termos de serviço',
-                  tam: 350,
+                  tam: 360,
                   iconInicio: Icons.description,
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 5),
                 BotaoOutlineWidget(
                   onPressed: () {},
                   txt: 'Sair',
-                  tam: 350,
+                  tam: 360,
                   iconInicio: Icons.logout,
                 ),
               ],

@@ -14,17 +14,17 @@ class SobrePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Este aplicativo foi desenvolvido com o propósito de auxiliar professores'
-                'da rede pública estadual e municipal no processo de alfabetização de alunos'
+                'Este aplicativo foi desenvolvido com o propósito de auxiliar professores '
+                'da rede pública estadual e municipal no processo de alfabetização de alunos '
                 'surdos na língua portuguesa.',
-                style: TextStyle(fontSize: 14),
+                style: TextStyle(fontSize: 16),
               ),
               SizedBox(height: 20),
               Row(
                 children: [
                   Text(
                     'Versão atual:',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
 
                   SizedBox(width: 5),
@@ -34,11 +34,11 @@ class SobrePage extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 'Créditos de desenvolvimento:',
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               Text(
                 'Uma parceria CAS Natal/RN + IFRN',
-                style: TextStyle(fontSize: 14),
+                style: TextStyle(fontSize: 16),
               ),
               Text(
                 'Desenvolvido por Mariana Araújo',
@@ -47,11 +47,11 @@ class SobrePage extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 'Contato para suporte ou feedback:',
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               Text(
                 'araujo.mariana1@escolar.ifrn.edu.br',
-                style: TextStyle(fontSize: 14),
+                style: TextStyle(fontSize: 16),
               ),
             ],
           ),

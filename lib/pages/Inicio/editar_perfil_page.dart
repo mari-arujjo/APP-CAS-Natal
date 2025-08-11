@@ -23,7 +23,7 @@ class _EditarPerfilPageState extends State<EditarPerfilPage> {
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.all(30),
             child: Column(
               children: [
                 Stack(

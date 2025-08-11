@@ -17,7 +17,7 @@ class _RedefinirSenhaPageState extends State<RedefinirSenhaPage> {
       appBar: AppBar(title: Text('Redefinir senha')),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.all(30),
           child: Column(
             children: [
               ContainerWidget(

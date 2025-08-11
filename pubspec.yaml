@@ -24,3 +24,5 @@ flutter:
     - lib/assets/logo_cas.png
     - lib/assets/logo_cas_transparente.png
     - lib/assets/diversidade.jpg
+    - lib/assets/menina.png
+    - lib/assets/menino.png

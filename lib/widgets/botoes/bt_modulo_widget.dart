@@ -45,7 +45,28 @@ class _BotaoModuloWidgetState extends State<BotaoModuloWidget> {
             ),
             shadowColor: WidgetStatePropertyAll(Colors.transparent),
           ),
-          child: Image.asset('lib/assets/diversidade.jpg'),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: 150,
+                height: 120,
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Image.asset(
+                  'lib/assets/diversidade.jpg',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              SizedBox(width: 10),
+              Text(
+                'História e Cultura\nSurda',
+                style: TextStyle(fontSize: 18, color: cores.preto),
+              ),
+            ],
+          ),
         ),
       ),
     );
