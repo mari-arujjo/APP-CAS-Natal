@@ -1,6 +1,6 @@
-import 'package:app_cas_natal/assets/cores.dart';
+import 'package:app_cas_natal/assets/color/cores.dart';
 import 'package:app_cas_natal/widgets/botoes/bt_laranja_widget.dart';
-import 'package:app_cas_natal/widgets/botoes/bt_outline_widget.dart';
+import 'package:app_cas_natal/widgets/botoes/bt_menu_widget.dart';
 import 'package:app_cas_natal/widgets/vizualizacao/foto.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -63,7 +63,7 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                 ),
 
                 SizedBox(height: 50),
-                BotaoOutlineWidget(
+                BotaoMenuWidget(
                   onPressed: () {
                     context.goNamed('Preferencias');
                   },
@@ -72,21 +72,21 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                   iconInicio: Icons.tune,
                 ),
                 SizedBox(height: 5),
-                BotaoOutlineWidget(
+                BotaoMenuWidget(
                   onPressed: () {},
                   txt: 'Favoritos',
                   tam: 360,
                   iconInicio: Icons.favorite,
                 ),
                 SizedBox(height: 5),
-                BotaoOutlineWidget(
+                BotaoMenuWidget(
                   onPressed: () {},
                   txt: 'Estatísticas',
                   tam: 360,
                   iconInicio: Icons.bar_chart,
                 ),
                 SizedBox(height: 5),
-                BotaoOutlineWidget(
+                BotaoMenuWidget(
                   onPressed: () {
                     context.goNamed('RedefinirSenha');
                   },
@@ -95,7 +95,7 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                   iconInicio: Icons.lock,
                 ),
                 SizedBox(height: 5),
-                BotaoOutlineWidget(
+                BotaoMenuWidget(
                   onPressed: () {
                     context.goNamed('Sobre');
                   },
@@ -104,14 +104,14 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                   iconInicio: Icons.info,
                 ),
                 SizedBox(height: 5),
-                BotaoOutlineWidget(
+                BotaoMenuWidget(
                   onPressed: () {},
                   txt: 'Termos de serviço',
                   tam: 360,
                   iconInicio: Icons.description,
                 ),
                 SizedBox(height: 5),
-                BotaoOutlineWidget(
+                BotaoMenuWidget(
                   onPressed: () {},
                   txt: 'Sair',
                   tam: 360,

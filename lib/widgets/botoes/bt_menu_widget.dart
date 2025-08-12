@@ -1,28 +1,24 @@
-import 'package:app_cas_natal/assets/cores.dart';
+import 'package:app_cas_natal/assets/color/cores.dart';
 import 'package:flutter/material.dart';
 
-class BotaoOutline2Widget extends StatefulWidget {
+class BotaoMenuWidget extends StatefulWidget {
   final String txt;
-  final String txt2;
   final VoidCallback onPressed;
   final double tam;
   final IconData iconInicio;
-  final Color corIcon;
-  const BotaoOutline2Widget({
+  const BotaoMenuWidget({
     super.key,
     required this.onPressed,
     required this.txt,
     required this.tam,
     required this.iconInicio,
-    required this.txt2,
-    required this.corIcon,
   });
 
   @override
-  State<BotaoOutline2Widget> createState() => _BotaoOutline2WidgetState();
+  State<BotaoMenuWidget> createState() => _BotaoMenuWidgetState();
 }
 
-class _BotaoOutline2WidgetState extends State<BotaoOutline2Widget> {
+class _BotaoMenuWidgetState extends State<BotaoMenuWidget> {
   final cores = Cores();
   bool pressionado = false;
 
@@ -31,17 +27,19 @@ class _BotaoOutline2WidgetState extends State<BotaoOutline2Widget> {
     return SizedBox(
       height: 50,
       width: widget.tam,
-      child: OutlinedButton(
+      child: ElevatedButton(
         style: ButtonStyle(
+          backgroundColor: WidgetStatePropertyAll(Colors.transparent),
+          shadowColor: WidgetStatePropertyAll(Colors.transparent),
           shape: WidgetStatePropertyAll(
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           ),
-          overlayColor: WidgetStatePropertyAll(Colors.transparent),
+          overlayColor: WidgetStatePropertyAll(cores.cinzaClaro),
           side: WidgetStatePropertyAll(
             BorderSide(color: Colors.transparent, width: 1),
           ),
           padding: WidgetStatePropertyAll(
-            EdgeInsets.symmetric(horizontal: 0, vertical: 5), // margem interna
+            EdgeInsets.symmetric(horizontal: 5, vertical: 5), // margem interna
           ),
         ),
         onPressed: widget.onPressed,
@@ -50,8 +48,15 @@ class _BotaoOutline2WidgetState extends State<BotaoOutline2Widget> {
           children: [
             Row(
               children: [
-                Icon(widget.iconInicio, size: 20, color: widget.corIcon),
-
+                Container(
+                  width: 35,
+                  height: 35,
+                  decoration: BoxDecoration(
+                    color: cores.laranja,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(widget.iconInicio, size: 20, color: cores.preto),
+                ),
                 SizedBox(width: 10),
                 Text(
                   widget.txt,
@@ -59,10 +64,8 @@ class _BotaoOutline2WidgetState extends State<BotaoOutline2Widget> {
                 ),
               ],
             ),
-            Text(
-              widget.txt2,
-              style: TextStyle(color: cores.laranja, fontSize: 16),
-            ),
+
+            Icon(Icons.arrow_forward_ios, size: 20, color: cores.preto),
           ],
         ),
       ),

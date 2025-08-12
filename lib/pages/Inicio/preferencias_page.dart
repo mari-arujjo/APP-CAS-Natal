@@ -1,6 +1,6 @@
-import 'package:app_cas_natal/assets/cores.dart';
+import 'package:app_cas_natal/assets/color/cores.dart';
 import 'package:app_cas_natal/widgets/botoes/bt_avatar_widget.dart';
-import 'package:app_cas_natal/widgets/botoes/bt_outline2_widget.dart';
+import 'package:app_cas_natal/widgets/botoes/bt_menu2_widget.dart';
 import 'package:flutter/material.dart';
 
 class PreferenciasPage extends StatefulWidget {
@@ -27,7 +27,7 @@ class _PreferenciasPageState extends State<PreferenciasPage> {
                 'Personalização da leitura',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              BotaoOutline2Widget(
+              BotaoMenu2Widget(
                 onPressed: () {},
                 txt: 'Fonte',
                 tam: 350,
@@ -35,7 +35,7 @@ class _PreferenciasPageState extends State<PreferenciasPage> {
                 txt2: 'Inter',
                 corIcon: cores.preto,
               ),
-              BotaoOutline2Widget(
+              BotaoMenu2Widget(
                 onPressed: () {},
                 txt: 'Tamanho da fonte',
                 tam: 350,
@@ -43,7 +43,7 @@ class _PreferenciasPageState extends State<PreferenciasPage> {
                 txt2: '14',
                 corIcon: cores.preto,
               ),
-              BotaoOutline2Widget(
+              BotaoMenu2Widget(
                 onPressed: () {},
                 txt: 'Cor da página',
                 tam: 350,
@@ -59,7 +59,7 @@ class _PreferenciasPageState extends State<PreferenciasPage> {
                 'Tela inicial',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              BotaoOutline2Widget(
+              BotaoMenu2Widget(
                 onPressed: () {},
                 txt: 'Exibição de estatísticas',
                 tam: 350,

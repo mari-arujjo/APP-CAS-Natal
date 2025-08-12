@@ -21,8 +21,13 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - lib/assets/logo_cas.png
-    - lib/assets/logo_cas_transparente.png
-    - lib/assets/diversidade.jpg
-    - lib/assets/menina.png
-    - lib/assets/menino.png
+    - lib/assets/images/logo_cas.png
+    - lib/assets/images/logo_cas_transparente.png
+    
+    - lib/assets/images/avatar/menina.png
+    - lib/assets/images/avatar/menino.png
+    
+    - lib/assets/images/modulos/cas.jpg
+    - lib/assets/images/modulos/diversidade.jpg
+    - lib/assets/images/modulos/letramento.png
+    - lib/assets/images/modulos/inclusao.jpg

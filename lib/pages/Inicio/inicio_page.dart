@@ -1,5 +1,5 @@
-import 'package:app_cas_natal/assets/cores.dart';
-import 'package:app_cas_natal/widgets/botoes/bt_modulo_widget.dart';
+import 'package:app_cas_natal/assets/color/cores.dart';
+import 'package:app_cas_natal/widgets/modulos/modulo2_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -32,25 +32,30 @@ class _InicioPageState extends State<InicioPage> {
       ),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.all(30),
           child: Column(
             children: [
               Image.asset(
-                'lib/assets/logo_cas_transparente.png',
-                width: 250,
-                height: 200,
+                'lib/assets/images/logo_cas_transparente.png',
+                width: 200,
+                height: 150,
               ),
               SizedBox(height: 30),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     'Módulos em andamento',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 5),
-                  BotaoModuloWidget(onPressed: () {}, tam: 350),
+                  CardModulo2Widget(onPressed: () {}),
+
+                  SizedBox(height: 20),
+                  Text(
+                    'Estatísticas',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
             ],

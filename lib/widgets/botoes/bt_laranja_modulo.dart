@@ -1,30 +1,29 @@
 import 'package:app_cas_natal/assets/color/cores.dart';
 import 'package:flutter/material.dart';
 
-class BotaoLaranjaWidget extends StatefulWidget {
+class BotaoLaranjaModuloWidget extends StatefulWidget {
   final String txt;
   final VoidCallback onPressed;
-  final double tam;
-  const BotaoLaranjaWidget({
+  const BotaoLaranjaModuloWidget({
     super.key,
     required this.txt,
     required this.onPressed,
-    required this.tam,
   });
 
   @override
-  State<BotaoLaranjaWidget> createState() => _BotaoLaranjaWidgetState();
+  State<BotaoLaranjaModuloWidget> createState() =>
+      _BotaoLaranjaModuloWidgetState();
 }
 
-class _BotaoLaranjaWidgetState extends State<BotaoLaranjaWidget> {
+class _BotaoLaranjaModuloWidgetState extends State<BotaoLaranjaModuloWidget> {
   bool pressionado = false;
   final cores = Cores();
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 45,
-      width: widget.tam,
+      height: 40,
+      width: double.infinity,
       child: Container(
         decoration: BoxDecoration(
           boxShadow: [

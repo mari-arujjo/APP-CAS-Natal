@@ -1,4 +1,4 @@
-import 'package:app_cas_natal/assets/cores.dart';
+import 'package:app_cas_natal/assets/color/cores.dart';
 import 'package:flutter/material.dart';
 
 class BotaoAvatarWidget extends StatefulWidget {
