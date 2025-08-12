@@ -2,10 +2,13 @@ import 'package:app_cas_natal/nav.dart';
 import 'package:app_cas_natal/pages/Glossario/glossario_page.dart';
 import 'package:app_cas_natal/pages/Inicio/config_page.dart';
 import 'package:app_cas_natal/pages/Inicio/editar_perfil_page.dart';
+import 'package:app_cas_natal/pages/Inicio/estatisticas_page.dart';
+import 'package:app_cas_natal/pages/Inicio/favoritos_page.dart';
 import 'package:app_cas_natal/pages/Inicio/inicio_page.dart';
 import 'package:app_cas_natal/pages/Inicio/preferencias_page.dart';
 import 'package:app_cas_natal/pages/Inicio/senha_page.dart';
 import 'package:app_cas_natal/pages/Inicio/sobre_page.dart';
+import 'package:app_cas_natal/pages/Inicio/termos_page.dart';
 import 'package:app_cas_natal/pages/Modulos/modulos_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -75,6 +78,20 @@ class AppNavigation {
                         },
                       ),
                       GoRoute(
+                        path: '/favoritos',
+                        name: 'Favoritos',
+                        builder: (context, state) {
+                          return FavoritosPage(key: state.pageKey);
+                        },
+                      ),
+                      GoRoute(
+                        path: '/estatisticas',
+                        name: 'Estatisticas',
+                        builder: (context, state) {
+                          return EstatisticasPage(key: state.pageKey);
+                        },
+                      ),
+                      GoRoute(
                         path: '/redefinirSenha',
                         name: 'RedefinirSenha',
                         builder: (context, state) {
@@ -86,6 +103,13 @@ class AppNavigation {
                         name: 'Sobre',
                         builder: (context, state) {
                           return SobrePage(key: state.pageKey);
+                        },
+                      ),
+                      GoRoute(
+                        path: '/termos',
+                        name: 'Termos',
+                        builder: (context, state) {
+                          return TermosPage(key: state.pageKey);
                         },
                       ),
                     ],

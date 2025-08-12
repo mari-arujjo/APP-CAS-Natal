@@ -71,20 +71,27 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                   tam: 360,
                   iconInicio: Icons.tune,
                 ),
+
                 SizedBox(height: 5),
                 BotaoMenuWidget(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.goNamed('Favoritos');
+                  },
                   txt: 'Favoritos',
                   tam: 360,
                   iconInicio: Icons.favorite,
                 ),
+
                 SizedBox(height: 5),
                 BotaoMenuWidget(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.goNamed('Estatisticas');
+                  },
                   txt: 'Estatísticas',
                   tam: 360,
                   iconInicio: Icons.bar_chart,
                 ),
+
                 SizedBox(height: 5),
                 BotaoMenuWidget(
                   onPressed: () {
@@ -94,6 +101,7 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                   tam: 360,
                   iconInicio: Icons.lock,
                 ),
+
                 SizedBox(height: 5),
                 BotaoMenuWidget(
                   onPressed: () {
@@ -103,13 +111,17 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                   tam: 360,
                   iconInicio: Icons.info,
                 ),
+
                 SizedBox(height: 5),
                 BotaoMenuWidget(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.goNamed('Termos');
+                  },
                   txt: 'Termos de serviço',
                   tam: 360,
                   iconInicio: Icons.description,
                 ),
+
                 SizedBox(height: 5),
                 BotaoMenuWidget(
                   onPressed: () {},

@@ -51,7 +51,7 @@ class _InicioPageState extends State<InicioPage> {
                   SizedBox(height: 5),
                   CardModulo2Widget(onPressed: () {}),
 
-                  SizedBox(height: 20),
+                  SizedBox(height: 25),
                   Text(
                     'Estatísticas',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
