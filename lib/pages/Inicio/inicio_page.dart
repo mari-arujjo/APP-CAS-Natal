@@ -1,5 +1,7 @@
 import 'package:app_cas_natal/assets/color/cores.dart';
 import 'package:app_cas_natal/widgets/modulos/modulo2_card_widget.dart';
+import 'package:app_cas_natal/widgets/modulos/modulo3_card_widget.dart';
+import 'package:app_cas_natal/widgets/vizualizacao/card_menor_estatistica_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -30,35 +32,89 @@ class _InicioPageState extends State<InicioPage> {
           ),
         ],
       ),
-      body: Center(
-        child: Padding(
-          padding: EdgeInsets.all(30),
-          child: Column(
-            children: [
-              Image.asset(
-                'lib/assets/images/logo_cas_transparente.png',
-                width: 200,
-                height: 150,
-              ),
-              SizedBox(height: 30),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Módulos em andamento',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 5),
-                  CardModulo2Widget(onPressed: () {}),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: EdgeInsets.all(30),
+            child: Column(
+              children: [
+                Image.asset(
+                  'lib/assets/images/logo_cas_transparente.png',
+                  width: 150,
+                  height: 100,
+                ),
+                SizedBox(height: 40),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Módulos em andamento',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 5),
+                    CardModulo3Widget(onPressed: () {}),
+                    SizedBox(height: 10),
+                    CardModulo2Widget(onPressed: () {}),
 
-                  SizedBox(height: 25),
-                  Text(
-                    'Estatísticas',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
-            ],
+                    SizedBox(height: 30),
+                    Text(
+                      'Estatísticas',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 5),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: CardMenorEstatisticaWidget(
+                            txt: 'Aulas assistidas',
+                            dado: '15',
+                            ico: Icons.play_circle,
+                            cor: cores.cinzaClaro,
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        Expanded(
+                          child: CardMenorEstatisticaWidget(
+                            txt: 'Média',
+                            dado: '9,00',
+                            ico: Icons.bar_chart,
+                            cor: cores.azulClaro2,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: CardMenorEstatisticaWidget(
+                            txt: 'Exerc. concluídos',
+                            dado: '60',
+                            ico: Icons.book,
+                            cor: cores.azulClaro2,
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        Expanded(
+                          child: CardMenorEstatisticaWidget(
+                            txt: 'Acertos',
+                            dado: '45',
+                            ico: Icons.check_circle,
+                            cor: cores.cinzaClaro,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

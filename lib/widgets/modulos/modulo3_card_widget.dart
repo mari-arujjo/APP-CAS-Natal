@@ -13,18 +13,18 @@ class CardModulo3Widget extends StatefulWidget {
 
 class _CardModulo3WidgetState extends State<CardModulo3Widget> {
   final cores = Cores();
-  double progresso = 0;
+  double progresso = 0.5;
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
         return Container(
-          height: 170,
+          height: 150,
           width: constraints.maxWidth, // pega a largura disponível do grid
           padding: const EdgeInsets.all(15),
           decoration: BoxDecoration(
-            color: cores.azulClaro,
+            color: cores.cinzaClaro,
             borderRadius: BorderRadius.circular(10),
           ),
           child: Column(
@@ -37,8 +37,8 @@ class _CardModulo3WidgetState extends State<CardModulo3Widget> {
                     child: Image.asset(
                       'lib/assets/images/modulos/letramento.png',
                       width:
-                          constraints.maxWidth * 0.40, // proporcional à largura
-                      height: 85,
+                          constraints.maxWidth * 0.35, // proporcional à largura
+                      height: 70,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -50,12 +50,12 @@ class _CardModulo3WidgetState extends State<CardModulo3Widget> {
                         Text(
                           'Letramento \n',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 18,
                             color: cores.preto,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        const SizedBox(height: 14),
+                        const SizedBox(height: 5),
                         Text(
                           '${(progresso * 100).toStringAsFixed(0)}% concluído',
                           style: TextStyle(fontSize: 12, color: cores.preto),
@@ -68,7 +68,7 @@ class _CardModulo3WidgetState extends State<CardModulo3Widget> {
               ),
               const SizedBox(height: 10),
               BotaoLaranjaModuloWidget(
-                txt: 'Iniciar módulo',
+                txt: 'Continuar',
                 onPressed: widget.onPressed,
               ),
             ],

@@ -20,7 +20,7 @@ class _CardModulo4WidgetState extends State<CardModulo4Widget> {
     return LayoutBuilder(
       builder: (context, constraints) {
         return Container(
-          height: 170,
+          height: 150,
           width: constraints.maxWidth, // pega a largura disponível do grid
           padding: const EdgeInsets.all(15),
           decoration: BoxDecoration(
@@ -37,8 +37,8 @@ class _CardModulo4WidgetState extends State<CardModulo4Widget> {
                     child: Image.asset(
                       'lib/assets/images/modulos/inclusao.jpg',
                       width:
-                          constraints.maxWidth * 0.40, // proporcional à largura
-                      height: 85,
+                          constraints.maxWidth * 0.35, // proporcional à largura
+                      height: 70,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -50,12 +50,12 @@ class _CardModulo4WidgetState extends State<CardModulo4Widget> {
                         Text(
                           'Direitos e Deveres para Prática Inclusiva ',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 18,
                             color: cores.preto,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        const SizedBox(height: 14),
+                        const SizedBox(height: 5),
                         Text(
                           '${(progresso * 100).toStringAsFixed(0)}% concluído',
                           style: TextStyle(fontSize: 12, color: cores.preto),

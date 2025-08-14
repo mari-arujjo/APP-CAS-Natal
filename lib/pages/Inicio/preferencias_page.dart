@@ -52,8 +52,7 @@ class _PreferenciasPageState extends State<PreferenciasPage> {
                 corIcon: cores.preto,
               ),
 
-              Divider(),
-              SizedBox(height: 15),
+              SizedBox(height: 30),
 
               Text(
                 'Tela inicial',
@@ -68,8 +67,7 @@ class _PreferenciasPageState extends State<PreferenciasPage> {
                 corIcon: cores.preto,
               ),
 
-              Divider(),
-              SizedBox(height: 15),
+              SizedBox(height: 30),
 
               Text(
                 'Avatar',

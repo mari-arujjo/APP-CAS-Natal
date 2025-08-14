@@ -30,7 +30,7 @@ class _BotaoAvatarWidgetState extends State<BotaoAvatarWidget> {
           shape: WidgetStatePropertyAll(
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           ),
-          overlayColor: WidgetStatePropertyAll(cores.cinzaClaro),
+          overlayColor: WidgetStatePropertyAll(cores.azulEscuro),
           side: WidgetStatePropertyAll(
             BorderSide(color: cores.azulEscuro, width: 1),
           ),
