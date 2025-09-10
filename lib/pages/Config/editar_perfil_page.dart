@@ -1,4 +1,4 @@
-import 'package:app_cas_natal/assets/color/cores.dart';
+import 'package:app_cas_natal/cores.dart';
 import 'package:app_cas_natal/widgets/botoes/bt_icon_widget.dart';
 import 'package:app_cas_natal/widgets/botoes/bt_laranja_widget.dart';
 import 'package:app_cas_natal/widgets/vizualizacao/container_widget.dart';

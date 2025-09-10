@@ -1,6 +1,6 @@
 name: app_cas_natal
 description: "A new Flutter project."
-publish_to: 'none' 
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
@@ -12,6 +12,8 @@ dependencies:
   go_router: ^16.0.0
   google_fonts: ^6.2.1
   cupertino_icons: ^1.0.8
+  flutter_native_splash: ^2.4.6
+  flutter_launcher_icons: ^0.14.4
 
 dev_dependencies:
   flutter_test:
@@ -21,13 +23,24 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - lib/assets/images/logo_cas.png
-    - lib/assets/images/logo_cas_transparente.png
-    
-    - lib/assets/images/avatar/menina.png
-    - lib/assets/images/avatar/menino.png
-    
-    - lib/assets/images/modulos/cas.jpg
-    - lib/assets/images/modulos/diversidade.jpg
-    - lib/assets/images/modulos/letramento.png
-    - lib/assets/images/modulos/inclusao.jpg
+    - assets/logo_cas.png
+    - assets/logo_cas_transparente.png
+
+    - assets/avatar/menina.png
+    - assets/avatar/menino.png
+
+    - assets/modulos/cas.jpg
+    - assets/modulos/diversidade.jpg
+    - assets/modulos/letramento.png
+    - assets/modulos/inclusao.jpg
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon_cas.png"
+
+flutter_native_splash:
+  color: "#ffffff"
+  android: true
+  ios: true
+  image: assets/icon_cas.png

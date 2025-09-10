@@ -1,4 +1,4 @@
-import 'package:app_cas_natal/assets/color/cores.dart';
+import 'package:app_cas_natal/cores.dart';
 import 'package:flutter/material.dart';
 
 class ContainerWidget extends StatefulWidget {

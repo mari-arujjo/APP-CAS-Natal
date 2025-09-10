@@ -1,4 +1,4 @@
-import 'package:app_cas_natal/assets/color/cores.dart';
+import 'package:app_cas_natal/cores.dart';
 import 'package:app_cas_natal/widgets/botoes/bt_laranja_modulo.dart';
 import 'package:app_cas_natal/widgets/vizualizacao/progess_bar_widget.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +35,7 @@ class _CardModulo1WidgetState extends State<CardModulo1Widget> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: Image.asset(
-                      'lib/assets/images/modulos/cas.jpg',
+                      'assets/modulos/cas.jpg',
                       width:
                           constraints.maxWidth * 0.35, // proporcional à largura
                       height: 70,

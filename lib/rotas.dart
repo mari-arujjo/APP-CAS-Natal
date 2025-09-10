@@ -1,21 +1,21 @@
 import 'package:app_cas_natal/nav.dart';
 import 'package:app_cas_natal/pages/Glossario/glossario_page.dart';
-import 'package:app_cas_natal/pages/Inicio/config_page.dart';
-import 'package:app_cas_natal/pages/Inicio/editar_perfil_page.dart';
-import 'package:app_cas_natal/pages/Inicio/estatisticas_page.dart';
-import 'package:app_cas_natal/pages/Inicio/favoritos_page.dart';
-import 'package:app_cas_natal/pages/Inicio/inicio_page.dart';
-import 'package:app_cas_natal/pages/Inicio/preferencias_page.dart';
-import 'package:app_cas_natal/pages/Inicio/senha_page.dart';
-import 'package:app_cas_natal/pages/Inicio/sobre_page.dart';
-import 'package:app_cas_natal/pages/Inicio/termos_page.dart';
+import 'package:app_cas_natal/pages/Config/config_page.dart';
+import 'package:app_cas_natal/pages/Config/editar_perfil_page.dart';
+import 'package:app_cas_natal/pages/Config/estatisticas_page.dart';
+import 'package:app_cas_natal/pages/Config/favoritos_page.dart';
+import 'package:app_cas_natal/pages/Config/preferencias_page.dart';
+import 'package:app_cas_natal/pages/Config/senha_page.dart';
+import 'package:app_cas_natal/pages/Config/sobre_page.dart';
+import 'package:app_cas_natal/pages/Config/termos_page.dart';
+import 'package:app_cas_natal/pages/Modulos/historia_surda_page.dart';
 import 'package:app_cas_natal/pages/Modulos/modulos_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class AppNavigation {
   AppNavigation._();
-  static String initR = '/inicio';
+  static String initR = '/modulos';
 
   /// KEYS DE NAVEGAÇÃO
   /// navegação global raiz do app, serve para navegar em telas fora da estrutura do shell, como:
@@ -45,80 +45,6 @@ class AppNavigation {
         },
 
         branches: <StatefulShellBranch>[
-          ////////////// BRANCH -> INICIO
-          StatefulShellBranch(
-            navigatorKey: _rootNavigatorInicio,
-            routes: [
-              GoRoute(
-                path: '/inicio',
-                name: 'Inicio',
-                builder: (context, state) {
-                  return InicioPage(key: state.pageKey);
-                },
-                routes: [
-                  GoRoute(
-                    path: '/configuracoes',
-                    name: 'Configuracoes',
-                    builder: (context, state) {
-                      return ConfiguracoesPage(key: state.pageKey);
-                    },
-                    routes: [
-                      GoRoute(
-                        path: '/editarPerfil',
-                        name: 'EditarPerfil',
-                        builder: (context, state) {
-                          return EditarPerfilPage(key: state.pageKey);
-                        },
-                      ),
-                      GoRoute(
-                        path: '/preferencias',
-                        name: 'Preferencias',
-                        builder: (context, state) {
-                          return PreferenciasPage(key: state.pageKey);
-                        },
-                      ),
-                      GoRoute(
-                        path: '/favoritos',
-                        name: 'Favoritos',
-                        builder: (context, state) {
-                          return FavoritosPage(key: state.pageKey);
-                        },
-                      ),
-                      GoRoute(
-                        path: '/estatisticas',
-                        name: 'Estatisticas',
-                        builder: (context, state) {
-                          return EstatisticasPage(key: state.pageKey);
-                        },
-                      ),
-                      GoRoute(
-                        path: '/redefinirSenha',
-                        name: 'RedefinirSenha',
-                        builder: (context, state) {
-                          return RedefinirSenhaPage(key: state.pageKey);
-                        },
-                      ),
-                      GoRoute(
-                        path: '/sobre',
-                        name: 'Sobre',
-                        builder: (context, state) {
-                          return SobrePage(key: state.pageKey);
-                        },
-                      ),
-                      GoRoute(
-                        path: '/termos',
-                        name: 'Termos',
-                        builder: (context, state) {
-                          return TermosPage(key: state.pageKey);
-                        },
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
-
           ////////////// BRANCH -> MODULOS
           StatefulShellBranch(
             navigatorKey: _rootNavigatorModulos,
@@ -129,11 +55,20 @@ class AppNavigation {
                 builder: (context, state) {
                   return ModulosPage(key: state.pageKey);
                 },
+                routes: [
+                  GoRoute(
+                    path: '/historiaECulturaSurda',
+                    name: 'HistoriaECulturaSurda',
+                    builder: (context, state) {
+                      return ModuloHistoriaSurdaPage(key: state.pageKey);
+                    },
+                  ),
+                ]
               ),
             ],
           ),
 
-          ////////////// BRANCH -> MODULOS
+          ////////////// BRANCH -> GLOSSARIO
           StatefulShellBranch(
             navigatorKey: _rootNavigatorGlossario,
             routes: [
@@ -146,6 +81,72 @@ class AppNavigation {
               ),
             ],
           ),
+
+          ////////////// BRANCH -> CONFIGURAÇÕES
+          StatefulShellBranch(
+            navigatorKey: _rootNavigatorInicio,
+            routes: [
+              GoRoute(
+                path: '/configuracoes',
+                name: 'Configuracoes',
+                builder: (context, state) {
+                  return ConfiguracoesPage(key: state.pageKey);
+                },
+                routes: [
+                  GoRoute(
+                    path: '/editarPerfil',
+                    name: 'EditarPerfil',
+                    builder: (context, state) {
+                      return EditarPerfilPage(key: state.pageKey);
+                    },
+                  ),
+                  GoRoute(
+                    path: '/preferencias',
+                    name: 'Preferencias',
+                    builder: (context, state) {
+                      return PreferenciasPage(key: state.pageKey);
+                    },
+                  ),
+                  GoRoute(
+                    path: '/favoritos',
+                    name: 'Favoritos',
+                    builder: (context, state) {
+                      return FavoritosPage(key: state.pageKey);
+                    },
+                  ),
+                  GoRoute(
+                    path: '/estatisticas',
+                    name: 'Estatisticas',
+                    builder: (context, state) {
+                      return EstatisticasPage(key: state.pageKey);
+                    },
+                  ),
+                  GoRoute(
+                    path: '/redefinirSenha',
+                    name: 'RedefinirSenha',
+                    builder: (context, state) {
+                      return RedefinirSenhaPage(key: state.pageKey);
+                    },
+                  ),
+                  GoRoute(
+                    path: '/sobre',
+                    name: 'Sobre',
+                    builder: (context, state) {
+                      return SobrePage(key: state.pageKey);
+                    },
+                  ),
+                  GoRoute(
+                    path: '/termos',
+                    name: 'Termos',
+                    builder: (context, state) {
+                      return TermosPage(key: state.pageKey);
+                    },
+                  ),
+                ],
+              ),
+            ],
+          ),
+
         ],
       ),
     ],

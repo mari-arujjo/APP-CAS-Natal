@@ -1,4 +1,4 @@
-import 'package:app_cas_natal/assets/color/cores.dart';
+import 'package:app_cas_natal/cores.dart';
 import 'package:app_cas_natal/widgets/modulos/modulo2_card_widget.dart';
 import 'package:app_cas_natal/widgets/modulos/modulo3_card_widget.dart';
 import 'package:app_cas_natal/widgets/vizualizacao/card_menor_estatistica_widget.dart';
@@ -57,7 +57,7 @@ class _InicioPageState extends State<InicioPage> {
                     SizedBox(height: 5),
                     CardModulo3Widget(onPressed: () {}),
                     SizedBox(height: 10),
-                    CardModulo2Widget(onPressed: () {}),
+                    CardModulo2Widget(onPressed: () {context.goNamed('HistoriaECulturaSurda');}),
 
                     SizedBox(height: 30),
                     Text(

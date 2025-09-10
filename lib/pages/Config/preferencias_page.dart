@@ -1,5 +1,5 @@
-import 'package:app_cas_natal/assets/color/cores.dart';
-import 'package:app_cas_natal/widgets/botoes/bt_avatar_widget.dart';
+import 'package:app_cas_natal/cores.dart';
+//import 'package:app_cas_natal/widgets/botoes/bt_avatar_widget.dart';
 import 'package:app_cas_natal/widgets/botoes/bt_menu2_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -69,7 +69,7 @@ class _PreferenciasPageState extends State<PreferenciasPage> {
 
               SizedBox(height: 30),
 
-              Text(
+              /*Text(
                 'Avatar',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
@@ -89,7 +89,7 @@ class _PreferenciasPageState extends State<PreferenciasPage> {
                     img: 'lib/assets/menino.png',
                   ),
                 ],
-              ),
+              ),*/
             ],
           ),
         ),

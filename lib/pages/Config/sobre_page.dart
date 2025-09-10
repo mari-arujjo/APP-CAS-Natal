@@ -28,7 +28,7 @@ class SobrePage extends StatelessWidget {
                   ),
 
                   SizedBox(width: 5),
-                  Text('1.0', style: TextStyle(fontSize: 14)),
+                  Text('1.0', style: TextStyle(fontSize: 16)),
                 ],
               ),
               SizedBox(height: 20),
@@ -42,7 +42,7 @@ class SobrePage extends StatelessWidget {
               ),
               Text(
                 'Desenvolvido por Mariana Araújo',
-                style: TextStyle(fontSize: 14),
+                style: TextStyle(fontSize: 16),
               ),
               SizedBox(height: 20),
               Text(

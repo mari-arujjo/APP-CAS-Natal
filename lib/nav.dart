@@ -1,4 +1,4 @@
-import 'package:app_cas_natal/assets/color/cores.dart';
+import 'package:app_cas_natal/cores.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -35,10 +35,10 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
             indicatorColor: cores.azulEscuro,
             selectedIndex: _selectedIndex,
             destinations: const <Widget>[
-              NavigationDestination(
+              /*NavigationDestination(
                 icon: Icon(Icons.home, color: Colors.black),
                 label: 'Início',
-              ),
+              ),*/
               NavigationDestination(
                 icon: Icon(Icons.school, color: Colors.black),
                 label: 'Módulos',
@@ -46,6 +46,10 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
               NavigationDestination(
                 icon: Icon(CupertinoIcons.book_solid, color: Colors.black),
                 label: 'Glossário',
+              ),
+              NavigationDestination(
+                icon: Icon(Icons.settings, color: Colors.black),
+                label: 'Configurações',
               ),
             ],
 
