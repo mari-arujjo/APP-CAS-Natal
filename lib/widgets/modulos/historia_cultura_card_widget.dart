@@ -3,17 +3,17 @@ import 'package:app_cas_natal/widgets/botoes/bt_laranja_modulo.dart';
 import 'package:app_cas_natal/widgets/vizualizacao/progess_bar_widget.dart';
 import 'package:flutter/material.dart';
 
-class CardModulo3Widget extends StatefulWidget {
+class CardModuloHistoriaCulturaWidget extends StatefulWidget {
   final VoidCallback onPressed;
-  const CardModulo3Widget({super.key, required this.onPressed});
+  const CardModuloHistoriaCulturaWidget({super.key, required this.onPressed});
 
   @override
-  State<CardModulo3Widget> createState() => _CardModulo3WidgetState();
+  State<CardModuloHistoriaCulturaWidget> createState() => _CardModuloHistoriaCulturaWidgetState();
 }
 
-class _CardModulo3WidgetState extends State<CardModulo3Widget> {
+class _CardModuloHistoriaCulturaWidgetState extends State<CardModuloHistoriaCulturaWidget> {
   final cores = Cores();
-  double progresso = 0.5;
+  double progresso = 0.3;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class _CardModulo3WidgetState extends State<CardModulo3Widget> {
           width: constraints.maxWidth, // pega a largura disponível do grid
           padding: const EdgeInsets.all(15),
           decoration: BoxDecoration(
-            color: cores.cinzaClaro,
+            color: cores.azulClaro,
             borderRadius: BorderRadius.circular(10),
           ),
           child: Column(
@@ -35,7 +35,7 @@ class _CardModulo3WidgetState extends State<CardModulo3Widget> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: Image.asset(
-                      'assets/modulos/letramento.png',
+                      'assets/modulos/diversidade.jpg',
                       width:
                           constraints.maxWidth * 0.35, // proporcional à largura
                       height: 70,
@@ -48,7 +48,7 @@ class _CardModulo3WidgetState extends State<CardModulo3Widget> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Letramento \n',
+                          'História e Cultura\nSurda',
                           style: TextStyle(
                             fontSize: 18,
                             color: cores.preto,

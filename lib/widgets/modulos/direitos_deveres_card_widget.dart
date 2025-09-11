@@ -3,15 +3,15 @@ import 'package:app_cas_natal/widgets/botoes/bt_laranja_modulo.dart';
 import 'package:app_cas_natal/widgets/vizualizacao/progess_bar_widget.dart';
 import 'package:flutter/material.dart';
 
-class CardModulo4Widget extends StatefulWidget {
+class CardModuloDireitosDeveresWidget extends StatefulWidget {
   final VoidCallback onPressed;
-  const CardModulo4Widget({super.key, required this.onPressed});
+  const CardModuloDireitosDeveresWidget({super.key, required this.onPressed});
 
   @override
-  State<CardModulo4Widget> createState() => _CardModulo4WidgetState();
+  State<CardModuloDireitosDeveresWidget> createState() => _CardModuloDireitosDeveresWidgetState();
 }
 
-class _CardModulo4WidgetState extends State<CardModulo4Widget> {
+class _CardModuloDireitosDeveresWidgetState extends State<CardModuloDireitosDeveresWidget> {
   final cores = Cores();
   double progresso = 0;
 

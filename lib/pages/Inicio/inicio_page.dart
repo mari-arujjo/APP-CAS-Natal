@@ -1,6 +1,6 @@
 import 'package:app_cas_natal/cores.dart';
-import 'package:app_cas_natal/widgets/modulos/modulo2_card_widget.dart';
-import 'package:app_cas_natal/widgets/modulos/modulo3_card_widget.dart';
+import 'package:app_cas_natal/widgets/modulos/historia_cultura_card_widget.dart';
+import 'package:app_cas_natal/widgets/modulos/letramento_card_widget.dart';
 import 'package:app_cas_natal/widgets/vizualizacao/card_menor_estatistica_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -55,9 +55,9 @@ class _InicioPageState extends State<InicioPage> {
                       ),
                     ),
                     SizedBox(height: 5),
-                    CardModulo3Widget(onPressed: () {}),
+                    CardModuloLetramentoWidget(onPressed: () {}),
                     SizedBox(height: 10),
-                    CardModulo2Widget(onPressed: () {context.goNamed('HistoriaECulturaSurda');}),
+                    CardModuloHistoriaCulturaWidget(onPressed: () {context.goNamed('HistoriaECulturaSurda');}),
 
                     SizedBox(height: 30),
                     Text(

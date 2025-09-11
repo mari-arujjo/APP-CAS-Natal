@@ -3,17 +3,17 @@ import 'package:app_cas_natal/widgets/botoes/bt_laranja_modulo.dart';
 import 'package:app_cas_natal/widgets/vizualizacao/progess_bar_widget.dart';
 import 'package:flutter/material.dart';
 
-class CardModulo1Widget extends StatefulWidget {
+class CardModuloLetramentoWidget extends StatefulWidget {
   final VoidCallback onPressed;
-  const CardModulo1Widget({super.key, required this.onPressed});
+  const CardModuloLetramentoWidget({super.key, required this.onPressed});
 
   @override
-  State<CardModulo1Widget> createState() => _CardModulo1WidgetState();
+  State<CardModuloLetramentoWidget> createState() => _CardModuloLetramentoWidgetState();
 }
 
-class _CardModulo1WidgetState extends State<CardModulo1Widget> {
+class _CardModuloLetramentoWidgetState extends State<CardModuloLetramentoWidget> {
   final cores = Cores();
-  double progresso = 1.0;
+  double progresso = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class _CardModulo1WidgetState extends State<CardModulo1Widget> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: Image.asset(
-                      'assets/modulos/cas.jpg',
+                      'assets/modulos/letramento.png',
                       width:
                           constraints.maxWidth * 0.35, // proporcional à largura
                       height: 70,
@@ -48,7 +48,7 @@ class _CardModulo1WidgetState extends State<CardModulo1Widget> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'História do CAS\nNatal/RN',
+                          'Letramento \n',
                           style: TextStyle(
                             fontSize: 18,
                             color: cores.preto,
@@ -68,7 +68,7 @@ class _CardModulo1WidgetState extends State<CardModulo1Widget> {
               ),
               const SizedBox(height: 10),
               BotaoLaranjaModuloWidget(
-                txt: 'Continuar',
+                txt: 'Iniciar módulo',
                 onPressed: widget.onPressed,
               ),
             ],

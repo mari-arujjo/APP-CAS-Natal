@@ -3,17 +3,17 @@ import 'package:app_cas_natal/widgets/botoes/bt_laranja_modulo.dart';
 import 'package:app_cas_natal/widgets/vizualizacao/progess_bar_widget.dart';
 import 'package:flutter/material.dart';
 
-class CardModulo2Widget extends StatefulWidget {
+class CardModuloHistoriaCASWidget extends StatefulWidget {
   final VoidCallback onPressed;
-  const CardModulo2Widget({super.key, required this.onPressed});
+  const CardModuloHistoriaCASWidget({super.key, required this.onPressed});
 
   @override
-  State<CardModulo2Widget> createState() => _CardModulo2WidgetState();
+  State<CardModuloHistoriaCASWidget> createState() => _CardModuloHistoriaCASWidgetState();
 }
 
-class _CardModulo2WidgetState extends State<CardModulo2Widget> {
+class _CardModuloHistoriaCASWidgetState extends State<CardModuloHistoriaCASWidget> {
   final cores = Cores();
-  double progresso = 0.3;
+  double progresso = 1.0;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class _CardModulo2WidgetState extends State<CardModulo2Widget> {
           width: constraints.maxWidth, // pega a largura disponível do grid
           padding: const EdgeInsets.all(15),
           decoration: BoxDecoration(
-            color: cores.azulClaro,
+            color: cores.cinzaClaro,
             borderRadius: BorderRadius.circular(10),
           ),
           child: Column(
@@ -35,7 +35,7 @@ class _CardModulo2WidgetState extends State<CardModulo2Widget> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: Image.asset(
-                      'assets/modulos/diversidade.jpg',
+                      'assets/modulos/cas.jpg',
                       width:
                           constraints.maxWidth * 0.35, // proporcional à largura
                       height: 70,
@@ -48,7 +48,7 @@ class _CardModulo2WidgetState extends State<CardModulo2Widget> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'História e Cultura\nSurda',
+                          'História do CAS\nNatal/RN',
                           style: TextStyle(
                             fontSize: 18,
                             color: cores.preto,

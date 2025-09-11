@@ -17,11 +17,12 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Configurações')),
+      
+      appBar: AppBar(toolbarHeight: 30),
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15, bottom: 20, top: 10),
+            padding: EdgeInsets.only(left: 15, right: 15, bottom: 20),
             child: Column(
               children: [
                 Row(

@@ -16,9 +16,8 @@ class _GlossarioPageState extends State<GlossarioPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Glossário'),
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(50),
+          preferredSize: Size.fromHeight(10),
           child: SearchBarWidget(),
         ),
       ),
