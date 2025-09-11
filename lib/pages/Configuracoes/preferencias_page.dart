@@ -54,7 +54,7 @@ class _PreferenciasPageState extends State<PreferenciasPage> {
 
               SizedBox(height: 30),
 
-              Text(
+              /*Text(
                 'Tela inicial',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
@@ -69,7 +69,7 @@ class _PreferenciasPageState extends State<PreferenciasPage> {
 
               SizedBox(height: 30),
 
-              /*Text(
+              Text(
                 'Avatar',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),

@@ -18,7 +18,7 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       
-      appBar: AppBar(toolbarHeight: 30),
+      appBar: AppBar(toolbarHeight: 40),
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
@@ -63,7 +63,7 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                   tam: 360,
                 ),
 
-                SizedBox(height: 50),
+                SizedBox(height: 30),
                 BotaoMenuWidget(
                   onPressed: () {
                     context.goNamed('Preferencias');
