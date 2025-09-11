@@ -8,8 +8,8 @@ import 'package:app_cas_natal/pages/Config/preferencias_page.dart';
 import 'package:app_cas_natal/pages/Config/senha_page.dart';
 import 'package:app_cas_natal/pages/Config/sobre_page.dart';
 import 'package:app_cas_natal/pages/Config/termos_page.dart';
-import 'package:app_cas_natal/pages/Modulos/historia_surda_page.dart';
-import 'package:app_cas_natal/pages/Modulos/modulos_page.dart';
+import 'package:app_cas_natal/pages/Cursos/historia_surda_page.dart';
+import 'package:app_cas_natal/pages/Cursos/cursos_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -53,7 +53,7 @@ class AppNavigation {
                 path: '/modulos',
                 name: 'Modulos',
                 builder: (context, state) {
-                  return ModulosPage(key: state.pageKey);
+                  return CursosPage(key: state.pageKey);
                 },
                 routes: [
                   GoRoute(

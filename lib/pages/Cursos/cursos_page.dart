@@ -5,14 +5,14 @@ import 'package:app_cas_natal/widgets/modulos/direitos_deveres_card_widget.dart'
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class ModulosPage extends StatefulWidget {
-  const ModulosPage({super.key});
+class CursosPage extends StatefulWidget {
+  const CursosPage({super.key});
 
   @override
-  State<ModulosPage> createState() => _ModulosPageState();
+  State<CursosPage> createState() => _CursosPageState();
 }
 
-class _ModulosPageState extends State<ModulosPage> {
+class _CursosPageState extends State<CursosPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
