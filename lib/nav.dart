@@ -51,6 +51,10 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
                 icon: Icon(Icons.settings, color: Colors.black),
                 label: 'Configurações',
               ),
+              NavigationDestination(
+                icon: Icon(Icons.admin_panel_settings, color: Colors.black),
+                label: 'Admin',
+              ),
             ],
 
             onDestinationSelected: (int index) {

@@ -1,4 +1,9 @@
 import 'package:app_cas_natal/nav.dart';
+import 'package:app_cas_natal/pages/Admin/Gestao%20Users/gestao_users_page.dart';
+import 'package:app_cas_natal/pages/Admin/Gestao%20aula/gestao_aula_page.dart';
+import 'package:app_cas_natal/pages/Admin/Gestao%20curso/gestao_curso_page.dart';
+import 'package:app_cas_natal/pages/Admin/Gestao%20glossario/gestao_glossario_page.dart';
+import 'package:app_cas_natal/pages/Admin/admin_page.dart';
 import 'package:app_cas_natal/pages/Glossario/glossario_page.dart';
 import 'package:app_cas_natal/pages/Configuracoes/config_page.dart';
 import 'package:app_cas_natal/pages/Configuracoes/editar_perfil_page.dart';
@@ -24,14 +29,17 @@ class AppNavigation {
 
   /// navegadores independentes, usados por cada StatefulShellBranch.
   /// mantém pilhas de navegação separadas
-  static final _rootNavigatorInicio = GlobalKey<NavigatorState>(
-    debugLabel: 'shellInicio',
+  static final _rootNavigatorCursos = GlobalKey<NavigatorState>(
+    debugLabel: 'shellCursos',
   );
   static final _rootNavigatorGlossario = GlobalKey<NavigatorState>(
     debugLabel: 'shellGlossario',
   );
-  static final _rootNavigatorModulos = GlobalKey<NavigatorState>(
-    debugLabel: 'shellModulos',
+  static final _rootNavigatorConfiguracoes = GlobalKey<NavigatorState>(
+    debugLabel: 'shellConfiguracoes',
+  );
+  static final _rootNavigatorAdmin= GlobalKey<NavigatorState>(
+    debugLabel: 'shellAdmin',
   );
 
   static final GoRouter rotas = GoRouter(
@@ -47,7 +55,7 @@ class AppNavigation {
         branches: <StatefulShellBranch>[
           ////////////// BRANCH -> MODULOS
           StatefulShellBranch(
-            navigatorKey: _rootNavigatorModulos,
+            navigatorKey: _rootNavigatorCursos,
             routes: [
               GoRoute(
                 path: '/modulos',
@@ -84,7 +92,7 @@ class AppNavigation {
 
           ////////////// BRANCH -> CONFIGURAÇÕES
           StatefulShellBranch(
-            navigatorKey: _rootNavigatorInicio,
+            navigatorKey: _rootNavigatorConfiguracoes,
             routes: [
               GoRoute(
                 path: '/configuracoes',
@@ -143,6 +151,50 @@ class AppNavigation {
                     },
                   ),
                 ],
+              ),
+            ],
+          ),
+
+          ////////////// BRANCH -> ADMIN 
+          StatefulShellBranch(
+            navigatorKey: _rootNavigatorAdmin,
+            routes: [
+              GoRoute(
+                path: '/admin',
+                name: 'Admin',
+                builder: (context, state) {
+                  return AdminPage(key: state.pageKey);
+                },
+                routes: [
+                  GoRoute(
+                    path: '/gestaoUsers',
+                    name: 'GestaoUsers',
+                    builder: (context, state) {
+                      return GestaoUsersPage(key: state.pageKey);
+                    },
+                  ),
+                  GoRoute(
+                    path: '/gestaoCurso',
+                    name: 'GestaoCurso',
+                    builder: (context, state) {
+                      return GestaoCursoPage(key: state.pageKey);
+                    },
+                  ),
+                  GoRoute(
+                    path: '/gestaoAula',
+                    name: 'GestaoAula',
+                    builder: (context, state) {
+                      return GestaoAulaPage(key: state.pageKey);
+                    },
+                  ),
+                  GoRoute(
+                    path: '/gestaoGlossario',
+                    name: 'GestaoGlossario',
+                    builder: (context, state) {
+                      return GestaoGlossarioPage(key: state.pageKey);
+                    },
+                  ),
+                ]
               ),
             ],
           ),
